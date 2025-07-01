@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+pond_env/
+reports/
+*.xlsx
+*.csv
+*.log
+.DS_Store
+.idea/
+.vscode/
