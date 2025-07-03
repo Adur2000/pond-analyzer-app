@@ -12,7 +12,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from PIL import Image
 import io
-from fpdf import FPDF
 import openai
 
 
