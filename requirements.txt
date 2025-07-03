@@ -6,3 +6,4 @@ seaborn
 xlsxwriter
 Pillow
 openai
+fpdf

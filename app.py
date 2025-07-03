@@ -58,6 +58,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from fpdf import FPDF
 import os
 from io import BytesIO
 
@@ -197,12 +198,14 @@ with st.expander("📝 Enter Feed Data Manually"):
     fig.savefig(pdf_buffer, format='png')
     pdf_buffer.seek(0)
 
-    pdf = FPDF()
-    pdf.add_page()
-    img_path = "temp_plot.png"
-    with open(img_path, "wb") as f:
-        f.write(pdf_buffer.read())
-    pdf.image(img_path, x=10, y=10, w=180)  # Use `pdf`, not `df`
+    
+from fpdf import FPDF
+pdf = FPDF()
+pdf.add_page()
+img_path = "temp_plot.png"
+with open(img_path, "wb") as f:
+    f.write(pdf_buffer.read())
+pdf.image(img_path, x=10, y=10, w=180)  # Use `pdf`, not `df`
 pdf.image("logo.png", x=10, y=8, w=30)
 pdf.ln(20)  # Add spacing after the logo
 
