@@ -60,7 +60,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from io import BytesIO
-from fpdf import FPDF
+
 from datetime import datetime
 
 st.set_page_config(layout="wide")
