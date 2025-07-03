@@ -10,3 +10,5 @@ reports/
 .DS_Store
 .idea/
 .vscode/
+.streamlit/secrets.toml
+
